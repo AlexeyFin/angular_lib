@@ -1,0 +1,27 @@
+.search_container .search_card{
+  background-color: rgba(234, 103, 42, .75);
+  border-radius: 1.25rem;
+
+}
+.search_container .search_card .form_body{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.search_container .search_card .form_body .form-group{
+  margin-bottom: 0;
+}
+.search_container .search_card .form_body .input_wrap{
+  min-width: 70%;
+}
+.search_container .search_card .form_body .btn_wrap{
+  width: 25%;
+}
+
+.search_container .search_card .form_body .input_wrap input {
+  font-size: 1.25rem;
+  letter-spacing: 1.48px;
+}
+.search_container .search_card .form_body .btn_wrap button {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,64 @@
+<div class="container search_container mt-5">
+  <div class="row">
+    <div class="card card-body search_card">
+      <form #form="ngForm">
+        <div class="form_body">
+          <div class="form-group input_wrap">
+            <input type="text"
+                   name="search_value"
+                   id="search_value"
+                   class="form-control"
+                   [(ngModel)]="searchValue"
+                    #searchVal = "ngModel"
+            >
+          </div>
+          <!-- /.form-group -->
+          <div class="form-group btn_wrap">
+            <button type="button" class="btn btn-block btn-primary" (click)="searchBooks()">
+              Search
+            </button>
+            <!-- /.btn btn-block btn-primary -->
+          </div>
+          <!-- /.form-group -->
+
+        </div>
+        <!-- /.form_body -->
+        <div class="form_footer">
+
+        </div>
+        <!-- /.form_footer -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="search_option_radio"  id="search_property_all"
+                 [(ngModel)]="searchProperty"
+                 value="all"
+
+          >
+          <label class="form-check-label" for="search_property_all">All</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="search_option_radio" id="search_property_title"
+                 [(ngModel)]="searchProperty"
+                 value="title">
+          <label class="form-check-label" for="search_property_title">Title</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="search_option_radio" id="search_property_author"
+                 [(ngModel)]="searchProperty"
+                 value="author">
+          <label class="form-check-label" for="search_property_author">Author</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="search_option_radio" id="search_property_publisher"
+                 [(ngModel)]="searchProperty"
+                 value="publisher">
+          <label class="form-check-label" for="search_property_publisher">Publisher</label>
+        </div>
+      </form>
+    </div>
+    <!-- /.card card-body search_card -->
+
+
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container search_container -->

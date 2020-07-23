@@ -1,0 +1,44 @@
+<app-search-bar></app-search-bar>
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+
+
+
+
+    <div class="col-11 mb-4" *ngFor="let book of books">
+      <div class="card card-body book_card">
+
+        <div class="row">
+          <div class="col-2">
+            <img [src]="book.imageUrl" style="width: 100%" alt="">
+          </div>
+          <!-- /.col-1 -->
+          <div class="col-7">
+            <h4 class="book_title  mt-2">{{book.bookTitle}}</h4>
+            <p class="book_info d-flex flex-column">
+              <span class="book-author">Author: {{book.author}}</span>
+              <span class="book-publisher">Publisher: {{book.publisher}}</span>
+              <span class="book_year">Year: {{book.yearOfPublic}}</span>
+
+            </p>
+          </div>
+          <!-- /.col-10 -->
+          <div class="col-3 d-flex justify-content-center align-items-center">
+
+              <a  class="btn book_details_link library_btn" routerLink="/books/{{book.isbn}}"><i class="fas fa-book mr-1"></i>View Details</a>
+
+          </div>
+          <!-- /.col-1 -->
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.card card-body -->
+    </div>
+    <!-- /.col-11 -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->

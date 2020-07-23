@@ -1,0 +1,27 @@
+image: node:10
+
+stages:
+  - build
+
+build:
+  stage: 'build'
+  script:
+    - apt update
+    - apt install -y curl
+    - apt install -y nodejs
+    - npm install -y npm@latest -g
+    - npm install -g @angular/cli
+    - rm package-lock.json
+    - npm install
+    - ng build --prod
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    when: on_success
+    name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+    paths:
+      - dist/
+      - Dockerfile
+      - server.js
+

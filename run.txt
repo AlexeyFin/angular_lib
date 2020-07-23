@@ -1,0 +1,5 @@
+docker run -d \
+            -e VIRTUAL_HOST=lib-dev.esverito.com \
+            -e VIRTUAL_PORT=3002 \
+            --name lib_front \
+            lib_front_img

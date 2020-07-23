@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #dcdcdc !important;
+}
+.library_btn{
+  border: 2px solid #EA672A !important;
+  cursor: pointer;
+  color: #EA672A !important;
+  letter-spacing: 1.12px;
+  transition: all .3s ease-in-out !important;
+}
+.library_btn:hover{
+  background-color: #EA672A !important;
+  color: #ffffff !important;
+}

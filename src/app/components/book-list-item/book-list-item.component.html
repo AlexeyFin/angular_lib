@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row">
+    <!-- /.col -->
+    <div class="col" *ngIf="book">
+      <div class="card card-body" id="contentToConvert">
+        <div class="book_warp d-flex">
+          <div class=" book_img mr-2">
+            <img crossorigin="anonymous" [src]="book.imageUrl" style="width: 200px;" alt="" >
+          </div>
+          <!-- /.col-4 -->
+          <div class="book_data">
+            <h1 class="book_name_title" >{{book.bookTitle}}</h1>
+            <p class="book_info d-flex flex-column">
+              <span class="book-author">Author: {{book.author}}</span>
+              <span class="book-publisher">Publisher: {{book.publisher}}</span>
+              <span class="book_year">Year: {{book.yearOfPublic}}</span>
+              <!-- /.book_year -->
+            </p>
+            <div class="book_description">
+              <h4>Description:</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias architecto culpa debitis dicta
+                doloribus ducimus eaque esse ex explicabo fuga hic iste itaque molestiae nihil non omnis perferendis qui,
+                quia, quidem repellat repudiandae, tempora tempore temporibus ut. Animi aperiam beatae commodi. Asperiores
+                distinctio eaque est expedita, quae quam suscipit.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum explicabo, harum id impedit incidunt laboriosam maxime obcaecati provident quas repellat, sit ullam. Delectus doloribus labore laudantium libero provident quia vel voluptas. Consectetur ea est fuga quia quis. A architecto consequuntur earum ipsam quisquam tempora. Ad, amet assumenda corporis dolores dolorum exercitationem incidunt maxime, mollitia odit quis, ratione reiciendis sequi voluptate.
+              </p>
+            </div>
+            <!-- /.book_description -->
+          </div>
+          <!-- /.col-8 book_data -->
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.card card-body -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+  <div class="row" *ngIf="book">
+    <div class="col py-5 d-flex justify-content-end" >
+      <button class="btn w-50 btn-success" type="button" (click)="captureScreen()">
+        Print me
+      </button>
+      <!-- /.btn btn-block btn-primary -->
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
+
+
